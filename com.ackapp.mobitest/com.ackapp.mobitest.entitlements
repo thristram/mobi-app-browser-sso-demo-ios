@@ -5,6 +5,7 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>applinks:redirect.ackapp.com</string>
+		<string>webcredentials:redirect.example.com</string>
 	</array>
 </dict>
 </plist>

@@ -42,6 +42,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIz-6f-HiM">
+                                <rect key="frame" x="20" y="398" width="374" height="331"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4C-Ss-RJC">
+                                <rect key="frame" x="20" y="783" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="WebAuthN"/>
+                                <connections>
+                                    <action selector="initWebAuthN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hXi-ay-eEW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -53,17 +69,24 @@
                             <constraint firstItem="3Fp-EE-w8A" firstAttribute="top" secondItem="xpL-66-dQE" secondAttribute="bottom" constant="60" id="Gfo-Rr-OiI"/>
                             <constraint firstItem="3Fp-EE-w8A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QTU-bC-gMI"/>
                             <constraint firstItem="4Qk-gy-G9N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-300" id="faL-nT-ODE"/>
+                            <constraint firstItem="O4C-Ss-RJC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gH1-rr-Wsd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O4C-Ss-RJC" secondAttribute="trailing" constant="20" id="m9D-lS-GOf"/>
                             <constraint firstItem="Zha-9g-mWR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgA-Zx-i1H"/>
+                            <constraint firstItem="O4C-Ss-RJC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdM-Xm-aIn"/>
+                            <constraint firstItem="MIz-6f-HiM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tAM-IJ-G1W"/>
+                            <constraint firstItem="MIz-6f-HiM" firstAttribute="top" secondItem="Zha-9g-mWR" secondAttribute="bottom" constant="50.5" id="taK-9J-ptI"/>
+                            <constraint firstItem="O4C-Ss-RJC" firstAttribute="top" secondItem="MIz-6f-HiM" secondAttribute="bottom" constant="54" id="wmr-Js-L1z"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="browserLabel" destination="3Fp-EE-w8A" id="TBA-x1-GAd"/>
                         <outlet property="urlLabel" destination="Zha-9g-mWR" id="DHk-Wh-uox"/>
+                        <outlet property="webview" destination="MIz-6f-HiM" id="Bij-Na-r3B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="99"/>
+            <point key="canvasLocation" x="18.840579710144929" y="98.4375"/>
         </scene>
     </scenes>
     <resources>

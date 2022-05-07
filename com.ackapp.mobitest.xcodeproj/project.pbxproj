@@ -13,6 +13,7 @@
 		9E13B9972806AEE6001089E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E13B9952806AEE6001089E7 /* Main.storyboard */; };
 		9E13B9992806AEE7001089E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E13B9982806AEE7001089E7 /* Assets.xcassets */; };
 		9E13B99C2806AEE7001089E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E13B99A2806AEE7001089E7 /* LaunchScreen.storyboard */; };
+		9EE94A192824914800811C9B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9EE94A182824914800811C9B /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9E13B9982806AEE7001089E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E13B99B2806AEE7001089E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E13B99D2806AEE7001089E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EE94A182824914800811C9B /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				9E13B9932806AEE6001089E7 /* ViewController.swift */,
 				9E13B9952806AEE6001089E7 /* Main.storyboard */,
 				9E13B9982806AEE7001089E7 /* Assets.xcassets */,
+				9EE94A182824914800811C9B /* index.html */,
 				9E13B99A2806AEE7001089E7 /* LaunchScreen.storyboard */,
 				9E13B99D2806AEE7001089E7 /* Info.plist */,
 			);
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E13B99C2806AEE7001089E7 /* LaunchScreen.storyboard in Resources */,
+				9EE94A192824914800811C9B /* index.html in Resources */,
 				9E13B9992806AEE7001089E7 /* Assets.xcassets in Resources */,
 				9E13B9972806AEE6001089E7 /* Main.storyboard in Resources */,
 			);
