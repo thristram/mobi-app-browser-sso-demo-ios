@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,40 +23,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpL-66-dQE">
-                                <rect key="frame" x="114" y="198.5" width="186" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Redirect back to browser"/>
-                                <connections>
-                                    <action selector="toBrowserButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQQ-uJ-VEl"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fp-EE-w8A">
-                                <rect key="frame" x="175.5" y="289.5" width="63" height="21"/>
+                                <rect key="frame" x="175.5" y="293.5" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Redirect URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zha-9g-mWR">
-                                <rect key="frame" x="157" y="326.5" width="100" height="21"/>
+                                <rect key="frame" x="157" y="330.5" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIz-6f-HiM">
-                                <rect key="frame" x="20" y="398" width="374" height="331"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4C-Ss-RJC">
-                                <rect key="frame" x="20" y="783" width="374" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4C-Ss-RJC">
+                                <rect key="frame" x="20" y="779.5" width="374" height="34.5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="WebAuthN"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SFSafariVC"/>
                                 <connections>
                                     <action selector="initWebAuthN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hXi-ay-eEW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAe-B7-8pS">
+                                <rect key="frame" x="51.5" y="241" width="311" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Redirect back to browser with ? query"/>
+                                <connections>
+                                    <action selector="toBrowserOld:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDC-nc-Ygr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpL-66-dQE">
+                                <rect key="frame" x="74.5" y="198.5" width="265" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Redirect back to browser with #"/>
+                                <connections>
+                                    <action selector="toBrowserButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQQ-uJ-VEl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,24 +65,23 @@
                         <constraints>
                             <constraint firstItem="xpL-66-dQE" firstAttribute="top" secondItem="4Qk-gy-G9N" secondAttribute="bottom" constant="40" id="0Ow-7O-3LK"/>
                             <constraint firstItem="4Qk-gy-G9N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8vK-SP-XrF"/>
+                            <constraint firstItem="PAe-B7-8pS" firstAttribute="top" secondItem="xpL-66-dQE" secondAttribute="bottom" constant="7.5" id="BEX-3j-T9y"/>
+                            <constraint firstItem="PAe-B7-8pS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cec-Vx-aML"/>
                             <constraint firstItem="Zha-9g-mWR" firstAttribute="top" secondItem="3Fp-EE-w8A" secondAttribute="bottom" constant="16" id="EiP-gp-1tc"/>
                             <constraint firstItem="xpL-66-dQE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="For-Hc-7QD"/>
                             <constraint firstItem="3Fp-EE-w8A" firstAttribute="top" secondItem="xpL-66-dQE" secondAttribute="bottom" constant="60" id="Gfo-Rr-OiI"/>
                             <constraint firstItem="3Fp-EE-w8A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QTU-bC-gMI"/>
                             <constraint firstItem="4Qk-gy-G9N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-300" id="faL-nT-ODE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O4C-Ss-RJC" secondAttribute="bottom" constant="48" id="fuN-Cf-nYb"/>
                             <constraint firstItem="O4C-Ss-RJC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gH1-rr-Wsd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O4C-Ss-RJC" secondAttribute="trailing" constant="20" id="m9D-lS-GOf"/>
                             <constraint firstItem="Zha-9g-mWR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgA-Zx-i1H"/>
                             <constraint firstItem="O4C-Ss-RJC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdM-Xm-aIn"/>
-                            <constraint firstItem="MIz-6f-HiM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tAM-IJ-G1W"/>
-                            <constraint firstItem="MIz-6f-HiM" firstAttribute="top" secondItem="Zha-9g-mWR" secondAttribute="bottom" constant="50.5" id="taK-9J-ptI"/>
-                            <constraint firstItem="O4C-Ss-RJC" firstAttribute="top" secondItem="MIz-6f-HiM" secondAttribute="bottom" constant="54" id="wmr-Js-L1z"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="browserLabel" destination="3Fp-EE-w8A" id="TBA-x1-GAd"/>
                         <outlet property="urlLabel" destination="Zha-9g-mWR" id="DHk-Wh-uox"/>
-                        <outlet property="webview" destination="MIz-6f-HiM" id="Bij-Na-r3B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

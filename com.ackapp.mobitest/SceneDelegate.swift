@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     }
     
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
@@ -49,7 +50,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
 
+            
+            // Get URL components from the incoming user activity.
+            guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+                let incomingURL = userActivity.webpageURL,
+                let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: true) else {
+                return
+            }
+
+            // Check for specific URL components that you need.
+            guard let path = components.path,
+                let params = components.queryItems else {
+                return
+            }
+                
+            switch path {
+            case "/ivvlanding":
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismissIVV"), object: nil, userInfo: [:])
+                break
+            default:
+                var userInfo:[String: String] = ["redirectURI": "none", "browser": "known"]
+                if let url = params.first(where: { $0.name == "redirectURI" } )?.value, let browser = params.first(where: { $0.name == "browser" })?.value {
+                    print("url = \(url)")
+                    print("browser = \(browser)")
+                    userInfo["redirectURI"] = url
+                    userInfo["browser"] = browser
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "getDeekLinkURI"), object: nil, userInfo: userInfo)
+
+                }
+                break
+            }
+
+                
+            }
+        
     
 }
 
